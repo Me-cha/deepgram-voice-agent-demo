@@ -12,7 +12,6 @@ export async function POST() {
           ),
     );
   }
-
   const deepgram = createClient(process.env.DEEPGRAM_API_KEY ?? "");
 
   let { result: projectsResult, error: projectsError } = await deepgram.manage.getProjects();
